@@ -1018,3 +1018,158 @@ section,
 .konsultani .content .read-more:hover i {
   margin-left: 10px;
 }
+
+/*--------------------------------------------------------------
+# Komunitas Section
+--------------------------------------------------------------*/
+.search-bar {
+  border-radius: 30px;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontal-container {
+  display: flex;
+}
+
+.rectangle,
+.add-post-section {
+  width: 700px;
+  float: left;
+}
+
+.add-post-section,
+.rectangle-comment {
+  width: 700px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.rectangle {
+  position: relative;
+  width: 420px;
+  height: 800px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.rectangle img {
+  max-width: 100%;
+  max-height: calc(100% - 50px);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.rectangle h3 {
+  position: absolute;
+  left: 30px;
+  margin: 0;
+  top: 20px;
+  font-size: 24px;
+}
+
+.add-post-section {
+  width: 853px;
+  height: 254px;
+  background-color: #81C65A;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px; 
+  padding: 27px 50px;
+  box-sizing: border-box;
+}
+
+.add-post-section h2 {
+  color: #032F3A;
+}
+
+.inner-rectangle {
+  width: 752px;
+  height: 84px;
+  background-color: white;
+  border-radius: 10px; 
+  padding: 10px;
+}
+
+.btn-cancel,
+.btn-send {
+  width: 100px;
+  background-color: #018B46;
+  color: white;
+}
+
+.rectangle-comment {
+  width: 853px;
+  height: auto;
+  background-color: #81C65A;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 42px 44px;
+  margin-top: 20px;
+  clear: both;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user-avatar img {
+  width: 89px;
+  height: 89px;
+  border-radius: 50%;
+}
+
+.comment-content {
+  line-height: 1.5;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.likes-comments {
+  display: flex;
+}
+
+.like-count,
+.comment-count {
+  margin: 0;
+}
+
+.like-comment-icons i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.user-details {
+  margin-left: 10px; 
+}
+
+.upload-date {
+  margin-top: 5px;
+}
