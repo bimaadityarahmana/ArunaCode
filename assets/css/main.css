@@ -1247,6 +1247,7 @@ section,
 .like-comment-icons i {
   margin-left: 10px;
   cursor: pointer;
+  color: black;
 }
 
 .user-details {
@@ -1256,6 +1257,51 @@ section,
 .upload-date {
   margin-top: 5px;
 }
+/*--------------------------------------------------------------
+# Komentar Postingan Page Section
+--------------------------------------------------------------*/
+.container-commentpost{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rectangle-commentpost {
+  width: 853px;
+  height: auto;
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 42px 44px;
+  margin-top: 20px;
+  clear: both;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+.user-details-post {
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+.user-name {
+  margin: 0; 
+}
+.upload-date {
+  margin: 5px 0 0;
+}
+.commentpost-footer {
+  display: flex;
+  justify-content: flex-end; 
+  width: 100%; 
+}
+.like-comment-icons {
+  display: flex;
+}
+.like-comment-icons i {
+  margin-right: 10px;
+}
+
 /*--------------------------------------------------------------
 # Chat Page Section
 --------------------------------------------------------------*/
