@@ -4,9 +4,7 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
   --nav-font: "Poppins", sans-serif;
 }
@@ -1021,3 +1019,377 @@ section,
 .konsultani .content .read-more:hover i {
   margin-left: 10px;
 }
+/*--------------------------------------------------------------
+# Konsultani Page Section
+--------------------------------------------------------------*/
+.image-konsultani {
+  padding: 5px;
+}
+.konsultani-head {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: normal;
+}
+
+.konsultani .headoftani {
+  font-weight: normal;
+  font-size: 48px;
+}
+
+.rectangle-konsultanilist {
+  width: 970px;
+  height: 233px;
+  background-color: #f3f3f3;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin: 20px auto;
+}
+
+.rectangle-konsultanilist .konsultani-list {
+  display: flex;
+  align-items: center;
+}
+
+.rectangle-konsultanilist .user-img {
+  margin-right: 20px;
+}
+
+.rectangle-konsultanilist .user-img img {
+  border-radius: 10px;
+}
+
+.rectangle-konsultanilist .name {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.rectangle-konsultanilist .detail {
+  display: flex;
+}
+
+.rectangle-konsultanilist .pendidikan,
+.rectangle-konsultanilist .pengalaman {
+  flex: 1;
+}
+
+.rectangle-konsultanilist .pendidikan p,
+.rectangle-konsultanilist .pengalaman p {
+  font-weight: medium;
+  font-size: 16px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-button {
+  width: 460px;
+  height: 92px;
+  background-color: #018b46;
+  border-radius: 30px;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.custom-button:hover {
+  background-color: #016535;
+}
+
+/*--------------------------------------------------------------
+# Komunitas Page Section
+--------------------------------------------------------------*/
+.search-bar {
+  border-radius: 30px;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontal-container {
+  display: flex;
+}
+
+.rectangle,
+.add-post-section {
+  width: 700px;
+  float: left;
+}
+
+.add-post-section,
+.rectangle-comment {
+  width: 700px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.rectangle {
+  position: relative;
+  width: 420px;
+  height: 800px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.rectangle img {
+  max-width: 100%;
+  max-height: calc(100% - 50px);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.rectangle h3 {
+  position: absolute;
+  left: 30px;
+  margin: 0;
+  top: 20px;
+  font-size: 24px;
+}
+
+.add-post-section {
+  width: 853px;
+  height: 254px;
+  background-color: #81c65a;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  padding: 27px 50px;
+  box-sizing: border-box;
+}
+
+.add-post-section h2 {
+  color: #032f3a;
+}
+
+.inner-rectangle {
+  width: 752px;
+  height: 84px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.btn-cancel,
+.btn-send {
+  width: 100px;
+  background-color: #018b46;
+  color: white;
+}
+
+.rectangle-comment {
+  width: 853px;
+  height: auto;
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 42px 44px;
+  margin-top: 20px;
+  clear: both;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user-avatar img {
+  width: 89px;
+  height: 89px;
+  border-radius: 50%;
+}
+
+.comment-content {
+  line-height: 1.5;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.likes-comments {
+  display: flex;
+}
+
+.like-count,
+.comment-count {
+  margin: 0;
+}
+
+.like-comment-icons i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.user-details {
+  margin-left: 10px;
+}
+
+.upload-date {
+  margin-top: 5px;
+}
+/*--------------------------------------------------------------
+# Chat Page Section
+--------------------------------------------------------------*/
+.body-chat {
+  font-family: var(--heading-font);
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+.container-chat {
+  display: flex;
+  height: 100vh;
+}
+.consultants {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+.consultant-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.consultant-item {
+  margin-bottom: 10px;
+}
+.consultant-item button {
+  display: flex;
+  align-items: center;
+  background-color: #fafafa;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+.consultant-item button:hover {
+  background-color: #f0f0f0;
+}
+.consultant-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.chat {
+  flex: 3;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.chat-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.back-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+.profile-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.online-status,
+.offline-status {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.chat-history {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.chat-input-container {
+  display: flex;
+  align-items: center;
+}
+.chat-input {
+  flex: 1;
+  height: 40px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
+}
+.send-btn {
+  background-color: lightskyblue;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+/*--------------------------------------------------------------
+# Login Section
+--------------------------------------------------------------*/
+
+.forgot-password {
+  color: blue;
+  text-decoration: none;
+}
+
+.sign-in-link {
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+/*--------------------------------------------------------------
+# Sign in
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Reseet Password
+--------------------------------------------------------------*/
