@@ -203,6 +203,7 @@ h6 {
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
+  margin-top: 50px;
 }
 
 .footer .footer-top {
@@ -1019,87 +1020,4 @@ section,
 
 .konsultani .content .read-more:hover i {
   margin-left: 10px;
-}
-
-/* education */
-#toback {
-  padding-top: 129px;
-  padding-bottom: 0;
-}
-
-#toback img a {
-  width: 14px;
-  text-decoration: none;
-}
-
-#toback p {
-  font-size: 28px;
-}
-
-#tagline-education h1 {
-  font-size: 60px;
-}
-#tagline-education p {
-  font-size: 28px;
-}
-
-#line {
-  padding-top: 29px;
-  padding-bottom: 40px;
-}
-
-#title-budidaya {
-  padding-top: 40px;
-}
-#title-budidaya h1 {
-  font-weight: 60px;
-}
-#title-budidaya p {
-  font-weight: 24px;
-}
-
-#title-all-card {
-  padding-bottom: 17px;
-}
-
-#card-section {
-  padding-bottom: 129px;
-}
-
-/* about */
-
-#toback-about {
-  padding-top: 28px;
-  padding-bottom: 34px;
-}
-
-#toback-about img {
-  width: 14px;
-}
-#toback-about p {
-  font-size: 20px;
-}
-
-#tagline-about {
-}
-
-#tagline-about p {
-  font-size: 15px;
-}
-
-#tagline-about h1 {
-  font-size: 30px;
-}
-
-#title-about h2 {
-  padding-top: 49px;
-  font-size: 20px;
-}
-#body-about {
-  padding-top: 70px;
-  padding-bottom: 383px;
-}
-
-#body-about .content-about {
-  padding-right: 20px;
 }
