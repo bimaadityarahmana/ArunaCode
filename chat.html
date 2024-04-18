@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Chat Konsultan</title>
 
     <!-- Favicons -->
@@ -59,141 +62,183 @@
     />
 
     <!-- ======================== -->
-
-</head>
-<body class="body-chat">
+  </head>
+  <body class="body-chat">
     <div class="container-chat">
-        <div class="consultants">
-            <h2>CHAT</h2>
-            <div class="consultant-list">
-                <div class="consultant-item" onclick="startChat('Prita Amanda')">
-                    <button>
-                        <div class="profile-info">
-                            <img src="./assets/img/konsultani/img_prita.png" alt="Prita Amanda">
-                            <div class="online-status"></div>
-                            <span>Prita Amanda</span>
-                        </div>
-                    </button>
-                </div>
-                <div class="consultant-item" onclick="startChat('Al Tamari')">
-                    <button>
-                        <div class="profile-info">
-                            <img src="./assets/img/konsultani/img_altamari.png" alt="Al Tamari">
-                            <div class="online-status"></div>
-                            <span>Al Tamari</span>
-                        </div>
-                    </button>
-                </div>
-                <div class="consultant-item" onclick="startChat('Mark Werner')">
-                    <button>
-                        <div class="profile-info">
-                            <img src="./assets/img/konsultani/img_markwerner.png" alt="Mark Werner">
-                            <div class="online-status"></div>
-                            <span>Mark Werner</span>
-                        </div>
-                    </button>
-                </div>
-            </div>
+      <div class="consultants">
+        <h2>CHAT</h2>
+        <div class="consultant-list">
+          <div
+            class="consultant-item"
+            onclick="startChat('Prita Amanda')"
+          >
+            <button>
+              <div class="profile-info">
+                <img
+                  src="./assets/img/konsultani/img_prita.png"
+                  alt="Prita Amanda"
+                />
+                <div class="online-status"></div>
+                <span>Prita Amanda</span>
+              </div>
+            </button>
+          </div>
+          <div
+            class="consultant-item"
+            onclick="startChat('Al Tamari')"
+          >
+            <button>
+              <div class="profile-info">
+                <img
+                  src="./assets/img/konsultani/img_altamari.png"
+                  alt="Al Tamari"
+                />
+                <div class="online-status"></div>
+                <span>Al Tamari</span>
+              </div>
+            </button>
+          </div>
+          <div
+            class="consultant-item"
+            onclick="startChat('Mark Werner')"
+          >
+            <button>
+              <div class="profile-info">
+                <img
+                  src="./assets/img/konsultani/img_markwerner.png"
+                  alt="Mark Werner"
+                />
+                <div class="online-status"></div>
+                <span>Mark Werner</span>
+              </div>
+            </button>
+          </div>
         </div>
-        
-        <div class="chat" style="display: none;">
-            <div class="chat-header">
-                <button class="back-btn" onclick="goBack()">
-                    <div class="arrow left"></div>
-                </button>                
-                <div class="profile-info">
-                    <img id="consultantImg" src="" alt="">
-                    <div id="consultantStatus" class="online-status"></div>
-                    <span id="consultantName"></span>
-                </div>
-            </div>
-            <div class="chat">
-                <div id="chatHistory" class="chat-history">
-                    <div class="message incoming-message"></div>
-                    <div class="message incoming-message"></div>
-                </div>
-                <div class="chat-input-container">
-                    <textarea id="messageInput" rows="3" cols="50" class="chat-input" placeholder="Ketik sesuatu..."></textarea>
-                    <button onclick="sendMessage()" class="send-btn">Kirim</button>
-                </div>
-            </div>        
+      </div>
+
+      <div
+        class="chat"
+        style="display: none"
+      >
+        <div class="chat-header">
+          <button
+            class="back-btn"
+            onclick="goBack()"
+          >
+            <div class="arrow left"></div>
+          </button>
+          <div class="profile-info">
+            <img
+              id="consultantImg"
+              src=""
+              alt=""
+            />
+            <div
+              id="consultantStatus"
+              class="online-status"
+            ></div>
+            <span id="consultantName"></span>
+          </div>
         </div>
+        <div class="chat">
+          <div
+            id="chatHistory"
+            class="chat-history"
+          >
+            <div class="message incoming-message"></div>
+            <div class="message incoming-message"></div>
+          </div>
+          <div class="chat-input-container">
+            <textarea
+              id="messageInput"
+              rows="3"
+              cols="50"
+              class="chat-input"
+              placeholder="Ketik sesuatu..."
+            ></textarea>
+            <button
+              onclick="sendMessage()"
+              class="send-btn"
+            >
+              Kirim
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
-        const chatHistory = document.getElementById('chatHistory');
-        const chatContainer = document.querySelector('.chat');
-        const consultantNameSpan = document.getElementById('consultantName');
-        const consultantImg = document.getElementById('consultantImg');
-        const consultantStatus = document.getElementById('consultantStatus');
-    
-        const consultantsData = {
-            "Prita Amanda": {
-                "imgSrc": "./assets/img/konsultani/img_prita.png",
-                "status": "Online"
-            },
-            "Al Tamari": {
-                "imgSrc": "./assets/img/konsultani/img_altamari.png",
-                "status": "Online"
-            },
-            "Mark Werner": {
-                "imgSrc": "./assets/img/konsultani/img_markwerner.png",
-                "status": "Online"
-            }
-        };
-    
-        function startChat(consultant) {
-            chatContainer.style.display = 'block';
-            chatHistory.innerHTML = '';
-            consultantNameSpan.textContent = consultant;
-            consultantImg.src = consultantsData[consultant].imgSrc;
-            if (consultantsData[consultant].status === "Online") {
-                consultantStatus.classList.add('online-status');
-            } else {
-                consultantStatus.classList.add('offline-status');
-            }
-            
-            const initialMessages = [
-                "Halo, ada yang bisa saya bantu?"
-            ];
-    
-            initialMessages.forEach(message => {
-                appendMessage("consultant", message);
-            });
-        }
-    
-        function sendMessage() {
-            const messageInput = document.getElementById('messageInput');
-            const message = messageInput.value;
-            if (message.trim() === '') return;
+      const chatHistory = document.getElementById("chatHistory");
+      const chatContainer = document.querySelector(".chat");
+      const consultantNameSpan = document.getElementById("consultantName");
+      const consultantImg = document.getElementById("consultantImg");
+      const consultantStatus = document.getElementById("consultantStatus");
 
-            // Tambahkan pesan pengguna ke riwayat chat
-            appendMessage("user", message);
+      const consultantsData = {
+        "Prita Amanda": {
+          imgSrc: "./assets/img/konsultani/img_prita.png",
+          status: "Online",
+        },
+        "Al Tamari": {
+          imgSrc: "./assets/img/konsultani/img_altamari.png",
+          status: "Online",
+        },
+        "Mark Werner": {
+          imgSrc: "./assets/img/konsultani/img_markwerner.png",
+          status: "Online",
+        },
+      };
 
-            // Menampilkan respon pertama dari konsultan
-            const response = "Iya, silahkan.";
-            appendMessage("consultant", response);
+      function startChat(consultant) {
+        chatContainer.style.display = "block";
+        chatHistory.innerHTML = "";
+        consultantNameSpan.textContent = consultant;
+        consultantImg.src = consultantsData[consultant].imgSrc;
+        if (consultantsData[consultant].status === "Online") {
+          consultantStatus.classList.add("online-status");
+        } else {
+          consultantStatus.classList.add("offline-status");
+        }
 
-            // Menampilkan respon kedua dari konsultan
-            const response1 = "Oh iya, Anda bisa langsung cek di education, disitu ada lengkap lhoo.";
-            setTimeout(function() {
-                appendMessage("consultant", response1);
-            }, 1000);
+        const initialMessages = ["Halo, ada yang bisa saya bantu?"];
 
-            messageInput.value = '';
-        }
-    
-        function appendMessage(sender, message) {
-            const messageClass = sender === "user" ? "outgoing-message" : "incoming-message";
-            const senderName = sender === "user" ? "You" : consultantNameSpan.textContent;
-            const messageElement = `<div class="message ${messageClass}"><p>${senderName}: ${message}</p></div>`;
-            chatHistory.innerHTML += messageElement;
-            chatHistory.scrollTop = chatHistory.scrollHeight; 
-        }
-    
-        function goBack() {
-            chatContainer.style.display = 'none';
-        }
+        initialMessages.forEach((message) => {
+          appendMessage("consultant", message);
+        });
+      }
+
+      function sendMessage() {
+        const messageInput = document.getElementById("messageInput");
+        const message = messageInput.value;
+        if (message.trim() === "") return;
+
+        // Tambahkan pesan pengguna ke riwayat chat
+        appendMessage("user", message);
+
+        // Menampilkan respon pertama dari konsultan
+        const response = "Iya, silahkan.";
+        appendMessage("consultant", response);
+
+        // Menampilkan respon kedua dari konsultan
+        const response1 = "Oh iya, Anda bisa langsung cek di education, disitu ada lengkap lhoo.";
+        setTimeout(function () {
+          appendMessage("consultant", response1);
+        }, 1000);
+
+        messageInput.value = "";
+      }
+
+      function appendMessage(sender, message) {
+        const messageClass = sender === "user" ? "outgoing-message" : "incoming-message";
+        const senderName = sender === "user" ? "You" : consultantNameSpan.textContent;
+        const messageElement = `<div class="message ${messageClass}"><p>${senderName}: ${message}</p></div>`;
+        chatHistory.innerHTML += messageElement;
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+      }
+
+      function goBack() {
+        chatContainer.style.display = "none";
+      }
     </script>
-</body>
+  </body>
 </html>
